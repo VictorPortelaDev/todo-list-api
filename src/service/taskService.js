@@ -1,45 +1,38 @@
 const taskModel = require("../models/taskModel");
 
-const createTask = async (title, description) => {
-  const task = await taskModel.createTask(title, description);
+const createTask = (title, description) => {
+  return taskModel.createTask(title, description);
 
-  return task;
 };
 
-const getAllTasks = async () => {
-  const tasks = await taskModel.getAllTasks();
+const getAllTasks = () => {
+  return taskModel.getAllTasks();
 
-  return tasks;
 };
 
-const getTaskById = async (id) => {
-  const task = await taskModel.getTaskById(id);
-
-  return task;
+const getTaskById = (id) => {
+  return taskModel.getTaskById(id);
+ 
 };
 
-const updateTask = async (id, title, description) => {
-    const task = await taskModel.updateTask(id, title, description);
+const updateTask = (id, title, description) => {
+  return taskModel.updateTask(id, title, description);
 
-    return task;
 };
 
-const updateTaskStatus = async (id, completed) => {
-    const task = await taskModel.updateTaskStatus(id, completed)
+const updateTaskStatus = (id, completed) => {
+  return taskModel.updateTaskStatus(id, completed)
 
-    return task
 }
 
-const updateTaskPartial = async (id, updates) => {
-    const task = await taskModel.updateTaskPartial(id, updates);
+const updateTaskPartial = (id, updates) => {
+  return taskModel.updateTaskPartial(id, updates);
 
-    return task;
 }
 
-const deleteTask = async (id) => {
-  const task = await taskModel.deleteTask(id)
+const deleteTask = (id) => {
+ return taskModel.deleteTask(id)
 
-  return task
 }
 
 module.exports = {

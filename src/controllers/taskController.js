@@ -40,11 +40,11 @@ const getTaskById = async (req, res) => {
       });
     }
 
-    res.status(200).json(task);
+    return res.status(200).json(task);
   } catch (error) {
     console.error("Erro ao buscar tarefas:", error);
 
-    return res.json(500).json({
+    return res.status(500).json({
       message: "Erro interno do servidor.",
     });
   }
@@ -101,12 +101,6 @@ const updateTaskPartial = async (req, res) => {
     const { id } = req.params;
     const updates = req.body;
 
-    if (updates.title === undefined && updates.description === undefined) {
-      return res.status(400).json({
-        message: "Informe pelo menos um campo para atualizar.",
-      });
-    }
-
     const task = await taskService.updateTaskPartial(id, updates);
 
     if (!task) {
@@ -144,7 +138,7 @@ const deleteTask = async (req, res) => {
   } catch (error) {
     console.error("Erro ao excluir tarefa: ", error);
 
-    res.status(500).json({
+    return res.status(500).json({
       message: "Erro interno do servidor.",
     });
   }
