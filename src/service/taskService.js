@@ -30,10 +30,10 @@ const updateTaskStatus = async (id, completed) => {
     return task
 }
 
-const updateTaskPartial = async () => {
-    const task = await taskModel.updateTaskPartial()
+const updateTaskPartial = async (id, updates) => {
+    const task = await taskModel.updateTaskPartial(id, updates);
 
-    return task
+    return task;
 }
 
 const deleteTask = async (id) => {
