@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <header class="hero">
+            <div class="status">
+                <span class="status-dot">
+                    API ONLINE
+                </span>
+            </div>
+            <h1>Task List <span>API</span></h1>
+
+            <p>Uma API REST desenvolvida para gerenciamento de tarefas, permitindo criar, consultar, atualizar e excluir atividades.</p>
+
+            <div class="hero-info">
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>PostgreSQL</span>
+            </div>
+        </header>
+
+        <section class="documentation">
+
+            <div class="section-header">
+                <h2>Endpoints</h2>
+                <p>Rotas disponíveis na API</p>
+            </div>
+
+            <div class="endpoint">
+                <div class="endpoint-info">
+                    <span class="method get">GET</span>
+                    <span class="route">/api/tasks</span>
+                </div>
+                <p>Lista todas as tarefas cadastradas.</p>
+            </div>
+            <div class="endpoint">
+                <div class="endpoint-info">
+                    <span class="method get">GET</span>
+                    <span class="route">/api/tasks/:id</span>
+                </div>
+                <p>Busca uma tarefa específica pelo ID.</p>
+            </div>
+
+            <div class="endpoint">
+                <div class="endpoint-info">
+                    <span class="method post">POST</span>
+                    <span class="route">/api/tasks</span>
+                </div>
+                <p>Cria uma nova tarefa.</p>
+            </div>
+
+            <div class="endpoint">
+                <div class="endpoint-info">
+                    <span class="method put">PUT</span>
+                    <span class="route">/api/tasks/:id</span>
+                </div>
+                <p>Atualiza todos os campos editáveis de uma tarefa.</p>
+            </div>
+
+            <div class="endpoint">
+                <div class="endpoint-info">
+                    <span class="method patch">PATCH</span>
+                    <span class="route">/api/tasks/:id</span>
+                </div>
+                <p>Atualiza parcialmente uma tarefa.</p>
+            </div>
+
+            <div class="endpoint">
+                <div class="endpoint-info">
+                    <span class="method patch">PATCH</span>
+                    <span class="route">/api/tasks/:id/complete</span>
+                </div>
+                <p>Altera o status de conclusão de uma tarefa.</p>
+            </div>
+
+            <div class="endpoint">
+                <div class="endpoint-info">
+                    <span class="method delete">DELETE</span>
+                    <span class="route">/api/tasks/:id</span>
+                </div>
+                <p>Exclui uma tarefa pelo ID.</p>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Task List API · Desenvolvido com Node.js & Express</p>
+        </footer>
+    </main>
+</body>
+</html>
